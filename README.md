@@ -113,3 +113,7 @@ Contact Form CFDB7
 Custom Post Type UI
 
 Mailchimp for WordPress
+
+![Image alt](http://iceadev.leka-web.site/images/ic2.jpg)
+
+![Image alt](http://iceadev.leka-web.site/images/ic1.jpg)
