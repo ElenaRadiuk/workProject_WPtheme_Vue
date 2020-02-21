@@ -1,0 +1,59 @@
+.main-nav-social {
+    background-color: white;
+
+    .social-nav__list {
+        display: flex;
+
+        @include max-w($screen-lg) {
+            justify-content: center;
+            background: rgba(0, 147, 104, .06);
+        }
+    }
+
+    li {
+        width: 60px;
+        height: 60px;
+        border: 1px solid rgba(174, 180, 184, .24);
+        border-radius: 50%;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 14px;
+
+        @include min-w($screen-xl) {
+            margin-left: 21px;
+        }
+    }
+
+    a {
+        width: 100%;
+        height: 100%;
+        max-width: 20px;
+        display: inline-block;
+    }
+    .fb-icon {
+        background-image: url('~@icons/ic-facebook.svg');
+
+        &:hover {
+            background-image: url('~@icons/ic-facebook-h.svg');
+        }
+    }
+    .in-icon {
+        background-image: url('~@icons/ic-linkedin.svg');
+
+        &:hover {
+            background-image: url('~@icons/ic-linkedin-h.svg');
+        }
+    }
+    .g-icon {
+        background-image: url('~@icons/ic-googleplus.svg');
+
+        &:hover {
+            background-image: url('~@icons/ic-googleplus-h.svg');
+        }
+    }
+
+    span {
+        display: none;
+    }
+}

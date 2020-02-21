@@ -1,0 +1,304 @@
+.ic-contact {
+    //display: flex;
+    //align-items: flex-start;
+
+    @include min-w($screen-md) {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .ic-contact__top-wrapper {
+        background: $lighGreen;
+
+        @include min-w($screen-md) {
+            width: 48%;
+        }
+
+        @include min-w($screen-xl) {
+            padding: 83px 110px 160px 15px;
+        }
+    }
+
+    .ic-contact__top-item {
+        //max-width: 608px;
+        //float: right;
+
+        @include min-w($screen-md) {
+            max-width: 608px;
+            float: right;
+        }
+
+        @include max-w($screen-xxl) {
+            padding: 25px 25px 35px;
+        }
+
+        .ic-contact__main-text {
+            font-size: $fontSizeContent;
+            line-height: 1.7;
+            color: $lighGrey;
+
+            @include min-w($screen-md) {
+                max-width: 336px;
+                margin: 0 auto;
+            }
+        }
+
+        .ic-arrow {
+            display: none;
+            @include min-w($screen-md) {
+                display: block;
+                margin-top: 30px;
+            }
+        }
+
+        .ic-contact__main-title {
+            font-family: $fontFamilyBold;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.17;
+            letter-spacing: normal;
+            color: $dark;
+            margin-top: 0;
+            font-size: 32px;
+
+            @include min-w($screen-md) {
+                font-size: 42px;
+            }
+
+            @include min-w($screen-xl) {
+                font-size: 72px;
+                margin-bottom: 42px;
+            }
+        }
+    }
+
+    .ic-contact__cf7-wrapper {
+
+        @include max-w($screen-md) {
+            background: rgba(0, 147, 104, .06);
+        }
+    }
+
+    .ic-form__cf7form {
+        .wpcf7-form {
+
+            @include max-w($screen-md) {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.ic-contact-info {
+    //display: flex;
+    @include max-w($screen-xxl) {
+        padding: 0 25px;
+    }
+
+    .ic-contact-info__inner {
+
+        @include min-w($screen-md) {
+            display: flex;
+            padding-left: 0;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+    }
+
+    .ic-contact-info__title {
+        position: relative;
+        font-size: $fontSizeBase;
+        font-weight: 600;
+        color: $dark;
+        padding: 12px 0 26px;
+        border-bottom: 1px solid rgba(153, 153, 153, .16);
+
+        @include min-w($screen-md) {
+            padding-left: 26px;
+        }
+
+        @include min-w($screen-xl) {
+            padding-left: 56px;
+            margin-bottom: 60px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 1px;
+            background-color: $darkGreen;
+            bottom: 0;
+        }
+    }
+
+    .ic-contact-info__text {
+        font-size: 16px;
+        line-height: 1.7;
+        color: $lighGrey;
+        max-width: 345px; //333
+        margin-bottom: 22px;
+
+        @include min-w($screen-md) {
+            padding-left: 26px;
+            font-size: $fontSizeContent;
+        }
+
+        @include min-w($screen-xl) {
+            padding-left: 56px;
+        }
+    }
+
+    .ic-contact-data {
+        @include min-w($screen-md) {
+            padding-left: 26px;
+        }
+
+        @include min-w($screen-xl) {
+            padding-left: 56px;
+        }
+
+        .ic-contact-databig {
+            font-size: 18px;
+            line-height: 1.7;
+            color: $darkGreen;
+
+            @include min-w($screen-xl) {
+                font-size: 32px;
+            }
+        }
+
+        .ic-contact-datareg {
+            font-size: 18px;
+            line-height: 1.78;
+            color: $darkGreen;
+        }
+    }
+
+    .ic-contact-info__column {
+        //max-width: 496px;
+        //width: 34%;
+
+        @include min-w($screen-md) {
+            max-width: 496px;
+            width: 34%;
+        }
+
+        &:last-child {
+            flex: 1;
+            max-width: none;
+
+            .ic-contact-info__text {
+                @include min-w($screen-xl) {
+                    max-width: 360px;
+                }
+            }
+        }
+
+        &:first-child {
+            .ic-contact-info__text {
+                @include min-w($screen-xl) {
+                    padding-left: 0;
+                }
+            }
+
+            .ic-contact-info__title {
+                @include min-w($screen-xl) {
+                    padding-left: 0;
+                }
+            }
+
+            .ic-contact-data {
+                @include min-w($screen-xl) {
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .data-text-wrapper {
+            @include min-w($screen-xl) {
+                min-height: 192px;
+            }
+        }
+
+        &:not(:last-child) {
+            .data-text-wrapper {
+                @include min-w($screen-md) {
+                    border-right: 1px solid rgba(153, 153, 153, .16);
+                }
+            }
+        }
+    }
+}
+
+.ic-contact-map {
+    position: relative;
+
+    @include max-w($screen-md) {
+        margin-top: 50px;
+    }
+
+    @include min-w($screen-xl) {
+        margin-top: 220px;
+    }
+
+    .ic-contact-map__address {
+        //position: absolute;
+        //top: -65px;
+        //right: 0;
+        //width: 60%;
+        padding: 25px;
+        background: white;
+        //max-width: 700px;
+
+        @include min-w($screen-md) {
+            position: absolute;
+            top: -65px;
+            right: 0;
+            width: 60%;
+            padding: 0 0 65px 65px;
+            background: white;
+            max-width: 700px;
+        }
+
+        .ic-contact-map__block {
+            padding: 24px;
+            background: #f0f9f6;
+
+            @include min-w($screen-md) {
+                padding: 72px 152px 78px 58px;
+            }
+        }
+
+        .ic-contact-map__title {
+            font-size: 14px;
+            font-weight: 600;
+            color: $dark;
+            padding-bottom: 25px;
+            margin: 0 0 33px;
+            border-bottom: 1px solid rgba(153, 153, 153, .16);
+        }
+
+        .ic-contact-map__text {
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 1.7;
+            letter-spacing: normal;
+            color: $darkGreen;
+
+            @include min-w($screen-md) {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .ic-contact-map__embed {
+        iframe {
+            @include max-w($screen-md) {
+                width: 100%;
+                max-height: 320px;
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+//  Подключения шрифтов
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: normal;
+    src:  local('Roboto'), local('Roboto-Regular');
+    src:  url('~@fonts/Roboto-Regular.eot');
+    src:  url('~@fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('~@fonts/Roboto-Regular.woff') format('woff'),
+        url('~@fonts/Roboto-Regular.ttf') format('truetype'),
+        url('~@fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+}
+
+// font-family: 'Roboto';
+// font-weight: 700;
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    src:  local('Roboto'), local('Roboto-Bold');
+    src:  url('~@fonts/Roboto-Bold.eot');
+    src:  url('~@fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('~@fonts/Roboto-Bold.woff') format('woff'),
+        url('~@fonts/Roboto-Bold.ttf') format('truetype'),
+        url('~@fonts/Roboto-Bold.svg#Roboto-Regular') format('svg');
+}
+
+//elina
+@font-face {
+    font-family: 'Elina03-Regular';
+    font-weight: normal;
+    src:  local('Elina03'), local('Elina03-Regular');
+    src:  url('~@fonts/Eina03-Regular.ttf');
+    src:  url('~@fonts/Eina03-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Elina03-SemiBold';
+    font-weight: bold;
+    src:  local('Elina03'), local('Elina03-SemiBold');
+    src:  url('~@fonts/Eina03-SemiBold.ttf');
+    src:  url('~@fonts/Eina03-SemiBold.ttf') format('truetype');
+}
+
+//Calendas_Plus
+@font-face {
+    font-family: 'Calendas_Plus';
+    font-weight: normal;
+    src:  local('Calendas_Plus'), local('Calendas_Plus');
+    src:  url('~@fonts/Calendas_Plus.ttf');
+    src:  url('~@fonts/Calendas_Plus.otf');
+    src:  url('~@fonts/Calendas_Plus.ttf') format('truetype');
+}
+
+// Заголовки
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $fontFamilyBase;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}

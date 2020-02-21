@@ -1,0 +1,462 @@
+.ic-price__top {
+    padding: 25px 25px 0;
+    background: rgba(0, 147, 104, .06);
+
+    @include min-w($screen-md) {
+        display: flex;
+        padding: 0;
+        background: none;
+    }
+
+    .ic-price__top-wrapper {
+        width: 100%;
+
+        @include min-w($screen-md) {
+            background: rgba(0, 147, 104, .06);
+            width: 48%;
+        }
+    }
+
+    .ic-price__top-item {
+        padding: 10px 0 5px;
+        float: none;
+
+        @include min-w($screen-md) {
+            padding: 75px;
+            float: right;
+        }
+        //@include min-w(768px) {
+        //    float: right;
+        //}
+
+        @include min-w($screen-xl) {
+            padding: 75px;
+        }
+        @include min-w($screen-xxl) {
+            padding: 70px 75px 137px;
+        }
+
+        .ic-price__main-title {
+            font-family: $fontFamilyBold;
+            max-width: 590px;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: normal;
+            color: $dark;
+            margin: 0;
+
+            @include min-w($screen-md) {
+                font-size: 42px;
+            }
+            @include min-w($screen-xl) {
+                font-size: 72px;
+            }
+        }
+    }
+
+    .ic-price__cf7-wrapper {
+
+        .wpcf7-form {
+            padding: 45px 24px 4px;
+            max-width: 100%;
+
+            @include min-w($screen-md) {
+                padding: 60px 69px 34px;
+                max-width: 592px;
+            }
+        }
+
+        .ic-form__cf7form  {
+            padding: 65px 0 0;
+
+            @include min-w($screen-md) {
+                padding: 65px 25px 0 65px;
+            }
+        }
+
+        input[type='text'] {
+            margin-bottom: 22px;
+        }
+
+        .free-trial__text {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: normal;
+            color: white;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(219, 219, 219, .1);
+            box-shadow: 0 32px 62px 0 rgba(39, 39, 39, .1);
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.ic-price-info {
+    padding: 70px 25px;
+
+    @include min-w($screen-xl) {
+        padding: 30px 25px 110px;
+    }
+    @include min-w($screen-xxl) {
+        padding: 30px 0 110px;
+    }
+
+    .ic-price-info__tabs {
+        margin: 0;
+        display: flex;
+
+        li {
+            width: 50%;
+            max-width: 545px;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 40px;
+        }
+
+        a {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: normal;
+            color: $dark;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 30px;
+            border-bottom: 1px solid $darkGreen;
+
+            &.inactive {
+                border-bottom: 1px solid #d8d8d8;
+            }
+        }
+    }
+
+    .ic-price-info_container {
+        //display: flex;
+        clear: both;
+
+        &:after {
+            content: ' ';
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+        }
+
+        @include max-w($screen-md) {
+            display: block;
+        }
+    }
+
+    .ic-price-info__column {
+        max-width: 100%;
+        width: 100%;
+        padding: 24px 43px;
+        margin-right: 40px;
+        box-shadow: 0 2px 4px 0 rgba(39, 39, 39, .08);
+        float: none;
+
+        @include min-w($screen-md) {
+            width: 33%;
+            max-width: 336px;
+            padding: 40px 48px;
+            float: left;
+        }
+
+        @include  min-max-w($screen-md, $screen-xl) {
+            width: 44%;
+            max-width: 100%;
+        }
+
+        @include max-w($screen-xl) {
+            margin-bottom: 20px;
+        }
+
+        .ic-price-info__title {
+            font-size: 24px;
+            font-weight: normal;
+            line-height: normal;
+            color: $darkGreen;
+            padding-bottom: 25px;
+            margin-bottom: 16px;
+            margin-top: 0;
+            border-bottom: 1px solid rgba(153, 153, 153, .16);
+
+            @include min-w($screen-md) {
+                margin-top: 24px;
+            }
+        }
+
+        .ic-price-info__sum {
+            font-size: 24px;
+            font-weight: normal;
+            color: $darkGreen;
+            line-height: normal;
+        }
+
+        .ic-price-info__desc {
+            font-size: 14px;
+            font-weight: normal;
+            line-height: normal;
+            color: $lighGrey;
+        }
+
+        .ic-price__features {
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: normal;
+            color: $lighGrey;
+        }
+    }
+
+    .ic-btn__try-btn {
+        padding: 17px;
+        width: 100%;
+        background-color: $darkGreen;
+        margin: 21px 0;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        color: white;
+
+        a {
+            color: white;
+
+            &:hover {
+                color: inherit;
+            }
+        }
+    }
+}
+
+.ic-price-guarantee {
+    clear: both;
+    background: rgba(80, 152, 255, .08);
+    padding: 0 25px;
+
+    @include min-w($screen-md) {
+        display: flex;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        -webkit-align-content: stretch;
+        align-content: stretch;
+        height: 100%;
+        background: none;
+        padding: 0;
+    }
+
+    .ic-price-guarantee_wrapper  {
+        background: none;
+        padding-top: 38px;
+
+        @include min-w($screen-md) {
+            width: 71%;
+            background: rgba(80, 152, 255, .08);
+        }
+
+        @include min-w($screen-xl) {
+            padding-top: 88px;
+        }
+    }
+
+    .ic-price-guarantee_content {
+        width: 100%;
+        max-width: 1100px;
+        padding-left: 25px;
+
+        @include min-w($screen-md) {
+            float: right;
+        }
+
+        .guarantee_content__small-title {
+            font-family: $fontFamilyBold;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: normal;
+            color: $dark;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(153, 153, 153, .16);
+            position: relative;
+            z-index: 2;
+
+            @include min-w($screen-xl) {
+                margin-left: 115px;
+            }
+        }
+
+        .guarantee_content__big-title {
+            font-family: $fontFamilyBold;
+            font-size: 28px;
+            font-weight: 600;
+            line-height: normal;
+            color: $dark;
+            max-width: 768px;
+            margin: 24px 0 32px;
+
+            @include min-w($screen-md) {
+                margin: 26px 0 36px;
+            }
+
+            @include  min-max-w($screen-md, $screen-lg) {
+                font-size: 36px;
+            }
+
+            @include  min-max-w($screen-lg, $screen-xxl) {
+                font-size: 40px;
+            }
+
+            @include min-w($screen-xxl) {
+                font-size: 56px;
+                margin: 56px 0 46px;
+                line-height: 1.2;
+            }
+        }
+
+        .guarantee_content__text {
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.8;
+            color: $lighGrey;
+
+            @include min-w($screen-md) {
+                font-size: 18px;
+                max-width: 336px;
+            }
+
+            @include min-w($screen-xl) {
+                margin-left: 115px;
+            }
+        }
+    }
+
+    .ic-price-guarantee_wrapper-img {
+        position: relative;
+        flex: 1;
+    }
+
+    .ic-price-guarantee_img {
+        position: relative;
+
+        &:before {
+            background: #f0f9f6;
+            content: '';
+            position: absolute;
+            display: block;
+            //width: 64px;
+            //left: -130px;
+            z-index: 1;
+            //top: 78px;
+            height: 55%;
+            width: 40px;
+            left: 0;
+            top: 60px;
+
+            @include min-w($screen-md) {
+                top: 78px;
+                left: -50px;
+                width: 50px;
+            }
+
+            @include  min-max-w($screen-md, $screen-lg) {
+                //left: -25px;
+            }
+
+            @include  min-max-w($screen-lg, $screen-xl) {
+                left: -50px;
+                width: 50px;
+            }
+
+            @include  min-w($screen-xl) {
+                left: -130px;
+                width: 64px;
+            }
+        }
+
+        img {
+            height: auto;
+            width: 100%;
+            max-width: 330px;
+            padding-top: 60px;
+
+            @include min-w($screen-md) {
+                position: relative;
+                max-width: 516px;
+                left: -130px;
+                top: 0;
+                padding-bottom: 58px;
+                padding-top: 78px;
+            }
+
+            @include  min-max-w($screen-md, $screen-lg) {
+                left: -25px;
+            }
+
+            @include  min-max-w($screen-lg, $screen-xl) {
+                left: -50px;
+            }
+        }
+    }
+
+    .ic-price-guarantee_img-block {
+        position: absolute;
+        bottom: 130px;
+        left: -25px;
+        background-color: $darkGreen;
+        display: flex;
+        padding: 34px;
+        z-index: 2;
+
+        @include min-w($screen-md) {
+            left: -55%;
+            padding: 58px 50px;
+        }
+
+        @include  min-max-w($screen-md, $screen-lg) {
+            bottom: 20px;
+            padding: 28px 20px;
+        }
+
+        @include  min-max-w($screen-lg, $screen-xl) {
+            bottom: 80px;
+        }
+    }
+
+    .ic-price-guarantee_img-text {
+        font-size: 11px;
+        font-weight: normal;
+        color: white;
+        line-height: 26px;
+
+        @include min-w($screen-md) {
+            font-size: 16px;
+        }
+
+        span {
+            display: block;
+            font-family: $fontFamilyBold;
+            font-size: 16px;
+
+            @include min-w($screen-md) {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .guarantee_img-block__icon {
+        width: 56px;
+        height: 56px;
+        background: #e5e33a;
+        margin-right: 16px;
+        margin-top: 3px;
+        border-radius: 50%;
+
+        img {
+            max-width: 18px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            transform: translateY(100%);
+        }
+    }
+}

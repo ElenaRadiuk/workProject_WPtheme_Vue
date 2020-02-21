@@ -1,0 +1,215 @@
+.page-footer {
+    position: relative;
+    flex: 0 0 auto;
+
+    .footer-info {
+        margin-top: 25px;
+
+        @include min-w($screen-md) {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-top: 55px;
+        }
+
+        @include min-w($screen-lg) {
+            flex-wrap: nowrap;
+        }
+
+        @include min-w($screen-xl) {
+            margin-top: 258px;
+            margin-bottom: 138px;
+            padding: 0;
+        }
+
+        &.page-container-wide {
+            padding: 0 25px;
+
+            @include min-w(1520px) {
+                padding: 0;
+            }
+        }
+    }
+
+    .footer-column1 {
+        width:100%;
+        //max-width: 560px;
+
+        @include min-w($screen-md) {
+            width:40%;
+            max-width: 560px;
+        }
+
+        img {
+            max-width: 114px!important;
+        }
+
+        .widget_media_image {
+            @include min-w($screen-xl) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .footer1-text {
+            font-size: 24px;
+            font-weight: normal;
+            line-height: normal;
+            color: $darkGreen;
+            margin-bottom: 54px;
+
+            @include min-w($screen-md) {
+                margin-bottom: 0;
+            }
+
+            @include  min-max-w($screen-md, $screen-lg) {
+                max-width: 275px;
+            }
+            @include min-w($screen-xl) {
+                max-width: 284px;
+            }
+        }
+    }
+
+    .footer-column-nav {
+        min-width: 0;
+
+        @include  min-max-w($screen-md, $screen-lg) {
+            min-width: 100px;
+        }
+
+        @include  min-max-w($screen-lg, $screen-xl) {
+            min-width: 100px;
+        }
+
+        @include  min-w($screen-xl) {
+            min-width: 151px;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            padding-bottom: 28px;
+            @include min-w($screen-xl) {
+                padding-bottom: 28px;
+            }
+        }
+
+        a {
+            font-size: 16px;
+            font-weight: normal;
+            color: $dark;
+        }
+    }
+
+    .footer-column4 {
+        min-width: 100%;
+
+        @include  min-max-w($screen-md, $screen-xl) {
+            min-width: 225px;
+        }
+
+        @include min-w($screen-xl) {
+            min-width: 300px;
+            padding-left: 82px;
+        }
+
+        .footer4-text {
+            font-size: 24px;
+            font-weight: normal;
+            color: $darkGreen;
+            line-height: normal;
+        }
+    }
+
+    .footer-column5 {
+        flex: 1;
+
+        @include min-w($screen-xl) {
+            padding-left: 99px;
+        }
+
+        .widget_text {
+            margin: 0;
+        }
+
+        .social-nav__list {
+            margin: 0;
+            background: none;
+
+            @include max-w($screen-lg) {
+                justify-content: flex-start;
+            }
+        }
+
+        li {
+            margin: 0 21px 0 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .widgettitle {
+        font-size: 16px;
+        font-weight: 600;
+        color: $dark;
+        margin-top: 0;
+        margin-bottom: 21px;
+        padding-top: 32px;
+
+        @include min-w($screen-md) {
+            padding-top: 0;
+        }
+    }
+}
+
+.page-footer__copyright {
+    padding-top: 26px;
+    padding-bottom: 37px;
+
+    @include min-w($screen-md) {
+        padding-top: 56px;
+        padding-bottom: 77px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include min-w($screen-xl) {
+        margin-bottom: 168px;
+        //padding: 0;
+    }
+
+    @include max-w(1520px) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    p {
+        margin: 0;
+
+        &:first-child {
+            @include max-w($screen-md) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 16px;
+        font-weight: normal;
+        color: #5c6361;
+    }
+
+    .madeby {
+        font-size: 16px;
+        font-weight: normal;
+        color: #5c6361;
+
+        span {
+            font-weight: 600;
+            color: $dark;
+        }
+    }
+}

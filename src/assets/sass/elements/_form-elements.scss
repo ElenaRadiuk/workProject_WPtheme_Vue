@@ -1,0 +1,185 @@
+// Все элементы формы
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='url'],
+input[type='search'],
+input[type='password'],
+textarea, select {
+    font-family: inherit;
+    width: 100%;
+    max-width: 100%;
+    background: none;
+    outline: 0 none;
+    border: 1px solid #dedede;
+    padding: 15px;
+    color: #333;
+    background-color: #fff;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.ic-form__cf7form {
+    padding: 25px;
+
+    @include min-w($screen-xl) {
+        padding: 66px 15px 135px 60px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .wpcf7-form {
+        max-width: 592px;
+        background-color: $darkGreen;
+        padding: 32px;
+
+        @include min-w($screen-xl) {
+            padding: 75px 70px 79px;
+        }
+    }
+
+    input {
+        background-color: $darkGreen;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, .24);
+        margin: 0 0 16px;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 16px 22px 20px;
+        cursor: pointer;
+        outline: none;
+
+        &:focus {
+            background-color: rgba(255, 255, 255, .12);
+            border-bottom: 1px solid #60dcc1;
+        }
+    }
+
+    input[type='submit'] {
+        background-color: $colorFormBtn;
+        padding: 19px;
+        width: 100%;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all ease .5s;
+        box-shadow: none;
+        margin: 0 0 8px;
+        outline: none;
+
+        &:hover {
+            background-color: $colorFormBtnHover;
+            border: none;
+        }
+    }
+
+    textarea {
+        background-color: $darkGreen;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, .24);
+        max-height: 133px;
+        resize: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 16px 22px 20px;
+        margin: 0 0 24px;
+
+        &:focus {
+            background-color: rgba(255, 255, 255, .12);
+            border-bottom: 1px solid #60dcc1;
+        }
+    }
+
+    .cf7-form__policy {
+        color: #d3eee8;
+        font-size: $fontSizeBase;
+        line-height: 1.4;
+    }
+}
+
+//home form
+.ic-home-form__cf7form {
+    padding: 0;
+
+    @include min-w($screen-md) {
+        padding: 20px 0 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .ic-form__cf7form {
+        padding: 0;
+
+        .wpcf7-form {
+            background: transparent;
+            padding: 0;
+        }
+    }
+
+    .hp_form {
+        position: relative;
+    }
+
+    .wpcf7-submit[type='submit'] {
+        position: absolute;
+        right: 0;
+        width: auto;
+        top: 0;
+        background: transparent;
+        color: transparent;
+        height: 65%;
+        outline: none;
+        border: none;
+    }
+
+    .email_input {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            background-image: url('~@icons/arrow-right.svg');
+            background-repeat: no-repeat;
+            display: inline-block;
+            right: 32px;
+            width: 38px;
+            height: 12px;
+            top: 6px;
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0);
+            box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, .24);
+            margin: 0 0 16px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            padding: 25px 16px 16px;
+            background: transparent;
+            width: 100%;
+            max-width: 575px;
+
+            @include min-w($screen-md) {
+                padding: 35px 32px 34px;
+            }
+
+            &:focus {
+                background-color: rgba(255, 255, 255, .12);
+                border-bottom: 1px solid #60dcc1;
+            }
+        }
+    }
+}

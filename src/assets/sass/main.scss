@@ -1,0 +1,27 @@
+//  Импорт файлов
+@import 'normalize-scss';
+@include normalize();
+
+$slick-font-path: '~slick-carousel/slick/fonts/';
+$slick-loader-path: '~slick-carousel/slick/';
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
+
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+@import 'base';
+@import 'typography';
+
+@import 'wp-classes';
+
+@import 'elements/form-elements';
+@import 'elements/buttons';
+@import 'elements/social-nav';
+
+@import 'block/header';
+@import 'block/footer';
+
+@import 'pages/home';
+@import 'pages/contact';
+@import 'pages/price';
