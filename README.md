@@ -93,7 +93,7 @@ sass/
 jQuery была возвращена в тему, переменные $ и jQuery доступны во всех файлах которые попадают в сборку.
 
 
-##Instaled plugins
+## Instaled plugins
 ACF to REST API
 
 Exposes Advanced Custom Fields Endpoints in the WordPress REST API
