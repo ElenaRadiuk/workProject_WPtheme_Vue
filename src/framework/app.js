@@ -4,7 +4,7 @@ require("./register");
 
 Vue.use(VueResource);
 
-Vue.http.options.root = "http://localhost:8081/wp-json";
+Vue.http.options.root = "/wp-json";
 
 Vue.config.productionTip = false;
 

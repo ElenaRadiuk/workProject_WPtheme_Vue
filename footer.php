@@ -33,8 +33,8 @@
             </div>
 
             <div class="page-footer__copyright page-container-wide">
-                <p class="copyright">&copy; <?php echo date("Y"); ?> - Icea spo. s. r. o.</p>
-                <p class="madeby">Made by <span>Soulmates</span></p>
+                <p class="copyright">&copy; <?php echo date("Y"); ?> - DMS ltd</p>
+                <p class="madeby">Made by <span>WEB studio</span></p>
             </div>
 
         </footer>

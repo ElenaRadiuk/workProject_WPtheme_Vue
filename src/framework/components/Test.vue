@@ -1,83 +1,40 @@
 <template>
-    <div>
-        test {{print}}
-        <div v-for="prod in products">
-            {{ prod.title.rendered }}
-        </div>
-
+    <div class="vue_product">
         <div class="ic-price__top">
             <div class="ic-price__top-wrapper">
                 <div class="ic-price__top-item">
-                    <h1 class="ic-price__main-title">Product</h1>
+                    <h3 class="ic-price__main-title"> {{print}} </h3>
                 </div>
             </div>
         </div>
 
         <div class="ic-price-info page-container-wide">
-            <ul id="tabs" class="ic-price-info__tabs">
-                <li><a id="tab1">lite</a></li>
-                <li><a id="tab2">pro</a></li>
-            </ul>
-
+        <div v-for="prod in products">
             <div class="ic-price-info_container container" id="tab1C">
                 <div class="ic-price-info__column">
                     <h3 class="ic-price-info__title">
-                        lite
+                        {{ prod.content.rendered }}
                     </h3>
-                    <div class="ic-price-info__product-price">
-                        <div class="ic-price-info__sum">price</div>
+                    <div class="ic-price-info__product-date">
+                        <h4>Available until date:</h4>
+                        <div class="ic-price-upto_date"> {{prod.acf.date_pr}} </div>
                     </div>
 
                     <div class="data-text-wrapper">
                         <div class="ic-btn__try-btn">
-                            <a href="">
-                                price
+                            <a href="/kontakt/">
+                                try this product
                             </a>
                         </div>
-                        <div class="ic-price-data">
+                        <div v-for="feature_item in prod.acf.properties_list_pr" class="ic-price-data">
                             <div class="ic-price__features">
-                                lite 1
-                            </div>
-                            <div class="ic-price__features">
-                                lite 1
-                            </div>
-                            <div class="ic-price__features">
-                                lite 1
+                                {{feature_item.feature}}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="ic-price-info_container container" id="tab2C">
-                <div class="ic-price-info__column">
-                    <h3 class="ic-price-info__title">
-                        pro
-                    </h3>
-                    <div class="ic-price-info__product-price">
-                        <div class="ic-price-info__sum">price</div>
-                    </div>
-
-                    <div class="data-text-wrapper">
-                        <div class="ic-btn__try-btn">
-                            <a href="">
-                                price
-                            </a>
-                        </div>
-                        <div class="ic-price-data">
-                            <div class="ic-price__features">
-                                pro
-                            </div>
-                            <div class="ic-price__features">
-                                pro
-                            </div>
-                            <div class="ic-price__features">
-                                pro
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
     </div>
 </template>
@@ -86,7 +43,7 @@
 export default {
     data() {
         return {
-            message: "test data: ",
+            message: "Products ",
             now: new Date(),
             products: []
         };
@@ -98,16 +55,42 @@ export default {
     },
     methods: {
         getText() {
-            return this.message + new Date();
+            return `${this.message} Available for data: ${new Date().toLocaleString()}`;
         }
     },
     created() {
         this.$http.get('wp/v2/products').then(response => {
-            window.console.log(response);
+            // window.console.log(response);
             for(let product in response.data) {
                 this.products.push(response.data[product]);
             }
-        }, error => { alert(error); });
+        }, error => { window.console.log(error); });
     }
 };
 </script>
+
+<style scoped lang="scss">
+    .vue_product .ic-price__top .ic-price__top-item {
+        padding: 55px;
+    }
+    .vue_product .ic-price__top .ic-price__top-item .ic-price__main-title {
+        font-size: 22px;
+    }
+    .vue_product .ic-price__top .ic-price__top-wrapper {
+        background: rgba(0, 147, 104, .06);
+        width: 50%;
+    }
+    .vue_product .ic-price-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .vue_product .ic-price-info .ic-price-info__column {
+        width: 100%
+    }
+
+    @media screen and (max-width: 768px){
+        .vue_product .ic-price__top .ic-price__top-wrapper {
+            width: 100%;
+        }
+    }
+</style>

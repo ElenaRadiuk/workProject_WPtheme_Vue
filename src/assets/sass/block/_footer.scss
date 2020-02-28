@@ -53,7 +53,7 @@
             font-size: 24px;
             font-weight: normal;
             line-height: normal;
-            color: $darkGreen;
+            color: $darkMainColor;
             margin-bottom: 54px;
 
             @include min-w($screen-md) {
@@ -117,8 +117,7 @@
         .footer4-text {
             font-size: 24px;
             font-weight: normal;
-            color: $darkGreen;
-            line-height: normal;
+            color: $darkMainColor;
         }
     }
 

@@ -1,6 +1,6 @@
 .page-header {
     position: relative;
-    background: $lighGreen;
+    background: $lightMainColor;
     //padding: 39px 0 40px;
 
     .menu-container {
@@ -145,7 +145,7 @@
         }
 
         a {
-            color: $darkGreen;
+            color: $darkMainColor;
             font-size: 16px;
             font-family: $fontFamilyBold;
             width: 100%;
@@ -175,7 +175,7 @@
 
     .line {
         display: block;
-        background: $darkGreen;
+        background: $darkMainColor;
         width: 36px;
         height: 2px;
         position: absolute;
